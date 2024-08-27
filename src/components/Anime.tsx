@@ -1,8 +1,14 @@
+import { IAnime } from "../model/IAnime"
 
-const Anime = () => {
+interface IAnimeProps {
+    anime: IAnime;
+}
+
+const Anime = ({anime}: IAnimeProps) => {
+
   return (
     <div>
-      
+      <h2>{anime.title}</h2>
     </div>
   )
 }

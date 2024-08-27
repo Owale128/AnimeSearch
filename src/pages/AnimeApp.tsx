@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
-import { AnimeContext, IAnimeContext } from "../context/AnimeContext"
+import Animes from "../components/Animes";
+import SearchAnime from "../components/SearchAnime";
+import { IAnime } from "../model/IAnime";
 
 const AnimeApp = () => {
-    const [getAnime, setGetAnime] = useState<IAnimeContext>({
-      myAnimes: []
-    })
+    const [getAnime, setGetAnime] = useState<IAnime[]>([])
     const [isLoading, setIsLoading] = useState(true)
+    const [query, setQuery] = useState('')
 
     useEffect(() => {
       const fetchAnime = async () => {
         try {
-          const response = await axios.get('https://api.jikan.moe/v4/anime?q=Naruto')
+          const response = await axios.get(`https://api.jikan.moe/v4/anime?q=${query}`)
           console.log(response.data.data)
           setGetAnime(response.data.data)
         } catch (error) {
@@ -21,16 +22,20 @@ const AnimeApp = () => {
         }
       }
       fetchAnime()
-    }, [])
+    }, [query])
 
     if(isLoading) {
       return <h4>...Loading...</h4>
     }
 
   return (
-    <AnimeContext.Provider value={getAnime}>
+    <>
       <h1>Anime List</h1>
-    </AnimeContext.Provider>
+      <SearchAnime setQuery={ setQuery}/>
+      <Animes getAnime={getAnime}/>
+    </>
+
+ 
   )
 }
 
