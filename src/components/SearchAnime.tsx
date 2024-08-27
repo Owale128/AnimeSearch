@@ -9,7 +9,9 @@ const SearchAnime = ({setQuery}: ISearchAnime) => {
 
     const handleSearch = (e: FormEvent) => {
         e.preventDefault()
-        setQuery(inputValue)  
+        if(inputValue.trim() !== ''){
+            setQuery(inputValue)  
+        }
     } 
 
   return (

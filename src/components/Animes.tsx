@@ -8,7 +8,6 @@ interface IAnimes {
 
 const Animes = ({getAnime}: IAnimes) => {
 
-
   return (
     <div>
        {getAnime.map((a) => (

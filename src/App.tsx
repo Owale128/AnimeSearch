@@ -1,13 +1,14 @@
 
+import { RouterProvider } from 'react-router-dom'
 import './App.css'
-import AnimeApp from './pages/AnimeApp'
+import { router } from './Router'
 
 
 function App() {
 
   return (
     <>
-    <AnimeApp />
+    <RouterProvider router={router} />
     </>
   )
 }

@@ -7,7 +7,7 @@ import { IAnime } from "../model/IAnime";
 const AnimeApp = () => {
     const [getAnime, setGetAnime] = useState<IAnime[]>([])
     const [isLoading, setIsLoading] = useState(true)
-    const [query, setQuery] = useState('')
+    const [query, setQuery] = useState('Naruto')
 
     useEffect(() => {
       const fetchAnime = async () => {
@@ -30,7 +30,6 @@ const AnimeApp = () => {
 
   return (
     <>
-      <h1>Anime List</h1>
       <SearchAnime setQuery={ setQuery}/>
       <Animes getAnime={getAnime}/>
     </>
