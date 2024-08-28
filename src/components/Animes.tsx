@@ -1,5 +1,6 @@
 import { IAnime } from "../model/IAnime"
 import Anime from "./Anime"
+import '../sass/anime.scss'
 
 
 interface IAnimes {
@@ -9,7 +10,7 @@ interface IAnimes {
 const Animes = ({getAnime}: IAnimes) => {
 
   return (
-    <div>
+    <div className="animesContainer">
        {getAnime.map((a) => (
         <Anime key={a.mal_id} anime={a}/>
        ))}

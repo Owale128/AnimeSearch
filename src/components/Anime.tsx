@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IAnime } from "../model/IAnime"
 import Modal from "./Modal";
+import '../sass/anime.scss';
 
 interface IAnimeProps {
     anime: IAnime;
@@ -18,11 +19,10 @@ const Anime = ({anime}: IAnimeProps) => {
   }
 
   return (
-    <div>
+    <div className="animeContainer">
       <h2>{anime.title}</h2>
       <img src={anime.images.jpg.image_url} alt={anime.title} />
-      <h4>Genre: {anime.type}</h4>
-      <p>{anime.synopsis}</p>
+      <p><span>Genre:</span> {anime.type}</p>
       <h5>More details:  <a href={anime.url} target="_blank" rel="noopener noreferrer">View on MyAnimeList</a></h5>
 
       {anime.trailer && anime.trailer.embed_url && (

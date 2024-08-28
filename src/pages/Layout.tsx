@@ -4,14 +4,14 @@ const Layout = () => {
 
   return (
     <div>
-      <header>
-        <h1>Anime List</h1>
+      <header style={{backgroundColor: 'black', padding: '0.1rem'}}>
+        <h1 style={{display: 'flex', justifyContent: 'center', color: 'white'}}>Anime List</h1>
       </header>
       <main>
         <Outlet />
       </main>
-      <footer>
-    All rights reserved
+      <footer style={{display: 'flex', justifyContent: 'center'}}>
+   All rights reserved
       </footer>
     </div>
   )
