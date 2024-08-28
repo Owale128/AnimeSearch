@@ -20,8 +20,8 @@ const Anime = ({anime}: IAnimeProps) => {
 
   return (
     <div className="animeContainer">
-      <h2>{anime.title}</h2>
       <img src={anime.images.jpg.image_url} alt={anime.title} />
+      <h2>{anime.title}</h2>
       <p><span>Genre:</span> {anime.type}</p>
       <h5>More details:  <a href={anime.url} target="_blank" rel="noopener noreferrer">View on MyAnimeList</a></h5>
 

@@ -3,6 +3,8 @@ import axios from "axios";
 import Animes from "../components/Animes";
 import SearchAnime from "../components/SearchAnime";
 import { IAnime } from "../model/IAnime";
+import TopAnime from "./TopAnime";
+import '../sass/animeApp.scss'
 
 const AnimeApp = () => {
     const [getAnime, setGetAnime] = useState<IAnime[]>([])
@@ -31,7 +33,11 @@ const AnimeApp = () => {
   return (
     <>
       <SearchAnime setQuery={ setQuery}/>
+
+      <div className="container">
+      <TopAnime />
       <Animes getAnime={getAnime}/>
+      </div>
     </>
 
  
