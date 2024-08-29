@@ -1,11 +1,9 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
+import { AnimeContext } from "../context/AnimeContext";
 import '../sass/searchAnime.scss'
 
-interface ISearchAnime {
-    setQuery: (searchText: string) => void;
-}
-
-const SearchAnime = ({setQuery}: ISearchAnime) => {
+const SearchAnime = () => {
+    const {setQuery} = useContext(AnimeContext)
     const [inputValue, setInputValue] = useState('')
 
     const handleSearch = (e: FormEvent) => {
@@ -17,7 +15,7 @@ const SearchAnime = ({setQuery}: ISearchAnime) => {
     } 
 
   return (
-   <form onSubmit={handleSearch}>
+    <form onSubmit={handleSearch}>
     <input type="text"
     value={inputValue}
     onChange={(e) => setInputValue(e.target.value)}

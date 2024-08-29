@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import axios from "axios";
 import Animes from "../components/Animes";
-import SearchAnime from "../components/SearchAnime";
 import { IAnime } from "../model/IAnime";
 import TopAnime from "./TopAnime";
 import '../sass/animeApp.scss'
+import { AnimeContext } from "../context/AnimeContext";
 
 const AnimeApp = () => {
     const [getAnime, setGetAnime] = useState<IAnime[]>([])
     const [isLoading, setIsLoading] = useState(true)
-    const [query, setQuery] = useState('Naruto')
+    const {query} = useContext(AnimeContext)
 
     useEffect(() => {
       const fetchAnime = async () => {
@@ -32,7 +32,7 @@ const AnimeApp = () => {
 
   return (
     <>
-      <SearchAnime setQuery={ setQuery}/>
+        <h1>Anime World</h1>
       <div className="container">
       <TopAnime />
       <Animes getAnime={getAnime}/>

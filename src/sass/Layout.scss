@@ -1,8 +1,25 @@
 header {
-    padding: 0.01rem;
-    background-color: black;
+    display: flex;
+    padding: 1rem;
+    background-color: rgb(39, 173, 217);
+    justify-content: center;
+    align-items: center;
+
+    p {
+        display: block;
+    }
+
+    .backLink {
+        color: white;
+        font-size: 1.5rem;
+
+        &:hover {
+            color: black;
+        }
+    }
     
-    h1 {
+    h4 {
+        font-size: 2rem;
         display: flex;
         color: white;
         justify-content: center;
@@ -13,4 +30,11 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;  
+}
+
+footer {
+    color: white;
+    padding: 1rem;
+    margin-top: 5rem;
+    background-color: rgb(39, 173, 217);
 }

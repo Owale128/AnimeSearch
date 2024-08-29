@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import '../sass/modal.scss'
+import '../sass/animeDetail.scss'
 
 const CloseButton = styled.button 
 `position: absolute;
-top: 15rem;
-right: 42rem;
+top: 11rem;
+right: 30rem;
 background: black;
 color: white;
 border: none;

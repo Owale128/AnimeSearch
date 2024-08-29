@@ -1,12 +1,22 @@
-import { Outlet } from "react-router-dom"
+import { NavLink, Outlet, useLocation } from "react-router-dom"
 import '../sass/Layout.scss'
+import SearchAnime from "../components/SearchAnime";
+import { useState } from "react";
+import { AnimeContext } from "../context/AnimeContext";
 
 const Layout = () => {
+  const [query, setQuery] = useState('Naruto')
+  const location = useLocation();
+  const detailPage = location.pathname.startsWith('/animeDetails');
 
   return (
-    <div>
+    <AnimeContext.Provider value={{query, setQuery}}>
+      
       <header>
-        <h1>Anime World</h1>
+        {detailPage && (
+          <NavLink to={'/'} className='backLink'>Back</NavLink>
+        )}
+        <SearchAnime  />
       </header>
       <main>
         <Outlet />
@@ -14,7 +24,7 @@ const Layout = () => {
       <footer style={{display: 'flex', justifyContent: 'center'}}>
    All rights reserved
       </footer>
-    </div>
+    </AnimeContext.Provider>
   )
 }
 
