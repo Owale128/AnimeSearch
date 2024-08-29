@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { IAnime } from "../model/IAnime"
 import axios from "axios"
 import ShowTopAnime from "../components/ShowTopAnime"
-import '../sass/ShowTopAnime.scss'
+import '../sass/topAnime.scss'
 
 
 const TopAnime = () => {
@@ -25,6 +25,7 @@ const TopAnime = () => {
     <div className="topAnimeContainer">
         <h2>Top Anime</h2>
       <ShowTopAnime topAnime={TopAnime}/>
+        <h2>Popular Anime</h2>
     </div>
   )
 }

@@ -33,7 +33,6 @@ const AnimeApp = () => {
   return (
     <>
       <SearchAnime setQuery={ setQuery}/>
-
       <div className="container">
       <TopAnime />
       <Animes getAnime={getAnime}/>

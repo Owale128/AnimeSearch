@@ -1,5 +1,5 @@
 import { IAnime } from "../model/IAnime"
-import '../sass/ShowTopAnime.scss'
+import '../sass/topAnime.scss'
 
 interface IShowTopAnime {
     topAnime: IAnime[]

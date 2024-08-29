@@ -5,7 +5,7 @@ const Layout = () => {
 
   return (
     <div>
-      <header style={{backgroundColor: 'black', padding: '0.1rem'}}>
+      <header>
         <h1>Anime World</h1>
       </header>
       <main>
