@@ -1,8 +1,8 @@
-import axios from "axios"
 import { IAnime } from "../model/IAnime"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import AnimeDetail from "../components/AnimeDetail"
+import { getAnimeDetails } from "../services/animeService"
 
 
 const AnimeDetails = () => {
@@ -12,8 +12,8 @@ const AnimeDetails = () => {
   useEffect(() => {
     const fetchAnimeDetails = async () => {
       try{
-        const response = await axios.get(`https://api.jikan.moe/v4/anime/${id}`)
-        setAnimeDetail(response.data.data)
+        const data = await getAnimeDetails(id!)
+        setAnimeDetail(data)
       }catch (error) {
         console.error('Could not fetch', error)
       }

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 import { IAnime } from "../model/IAnime"
-import axios from "axios"
 import ShowTopAnime from "../components/ShowTopAnime"
 import '../sass/topAnime.scss'
 import PopularAnime from "./PopularAnime"
+import { getTopAnime } from "../services/animeService"
 
 
 const TopAnime = () => {
@@ -12,9 +12,9 @@ const TopAnime = () => {
         useEffect(() => {
             const fetchTopAnime = async () => {
                 try {
-                    const repsonse = await axios.get('https://api.jikan.moe/v4/top/anime')
-                    setTopAnime(repsonse.data.data)
-                    console.log(repsonse.data.data,' top anime')
+                    const data= await getTopAnime()
+                    setTopAnime(data)
+                    console.log(data,' top anime')
                 } catch (error) {
                     console.error('Could not fetch error', error)
                 }

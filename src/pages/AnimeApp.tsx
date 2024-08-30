@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react"
-import axios from "axios";
 import Animes from "../components/Animes";
 import { IAnime } from "../model/IAnime";
 import TopAnime from "./TopAnime";
 import '../sass/animeApp.scss'
 import { AnimeContext } from "../context/AnimeContext";
+import { searchForAnime } from "../services/animeService";
 
 const AnimeApp = () => {
     const [getAnime, setGetAnime] = useState<IAnime[]>([])
@@ -14,9 +14,9 @@ const AnimeApp = () => {
     useEffect(() => {
       const fetchAnime = async () => {
         try {
-          const response = await axios.get(`https://api.jikan.moe/v4/anime?q=${query}`)
-          console.log(response.data.data)
-          setGetAnime(response.data.data)
+          const data = await searchForAnime(query)
+          console.log(data)
+          setGetAnime(data)
         } catch (error) {
           console.error('Could not fetch:', error)
         } finally{
