@@ -14,19 +14,21 @@
     padding: 1rem;
     text-align: center;
     cursor: pointer;
-    height: 28rem;
-
+    height: 26rem;
+    
     .navLink {
-        bottom: 0;
+        color: black;
     }
     
     h2 {
         font-size: 1.2rem;
+        color: black;
     }
 
     img {
         width: 16rem;
         height: 18rem;
+        margin-top: 0.3rem;
         border-radius: 1rem;
         border: 0.01rem solid black; 
     }

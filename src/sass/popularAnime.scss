@@ -1,0 +1,17 @@
+    .popularAnime {
+        display: flex;
+        padding: 1rem;
+        align-items: center;
+        margin-bottom: 1rem;
+        background-color: white;
+        border: 0.01rem solid black;
+
+        h3 {
+            margin-left: 1rem;
+        }
+        
+        img {
+            width: 5rem;
+        }
+    }
+    

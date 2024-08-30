@@ -21,13 +21,14 @@ const AnimeDetail = ({animeDetail}: IAnimeDetail) => {
 
   return (
     <div className="animeDetailContainer">
-      <h2>{animeDetail.title}</h2>
       <img src={animeDetail.images.jpg.image_url} alt={animeDetail.title} />
+      <div className="animeTextContent">
+      <h2>{animeDetail.title}</h2>
       <p>{animeDetail.synopsis}</p>
 
       {animeDetail.trailer && animeDetail.trailer.embed_url && (
         <>
-        <button onClick={openModal}>Watch trailer</button>
+        <button onClick={openModal} className="openModalBtn">Watch trailer</button>
         <Modal isOpen={isModalOpen} onClose={closeModal}>
           <iframe
               width="560"
@@ -35,11 +36,12 @@ const AnimeDetail = ({animeDetail}: IAnimeDetail) => {
               src={animeDetail.trailer.embed_url}
               title={animeDetail.title}
               allowFullScreen
-            ></iframe>
+              ></iframe>
         </Modal>
         </>
       )}
       
+      </div>
     </div>
   )
 }
