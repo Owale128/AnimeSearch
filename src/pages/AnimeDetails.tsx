@@ -1,31 +1,18 @@
-import { IAnime } from "../model/IAnime"
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import AnimeDetail from "../components/AnimeDetail"
 import { getAnimeDetails } from "../services/animeService"
+import { useFetchAnime } from "../hooks/useFetchAnime"
 
 
 const AnimeDetails = () => {
-  const [animeDetail, setAnimeDetail] = useState<IAnime | null>(null)
   const { id } = useParams<{id: string}>()
+  const {data, isLoading} = useFetchAnime(() => getAnimeDetails(id!))
 
-  useEffect(() => {
-    const fetchAnimeDetails = async () => {
-      try{
-        const data = await getAnimeDetails(id!)
-        setAnimeDetail(data)
-      }catch (error) {
-        console.error('Could not fetch', error)
-      }
-    }
-    fetchAnimeDetails()
-  }, [id])
-
-  if(!animeDetail) return <p>..Loading...</p>
+  if(isLoading) return <h4 style={{height: '100vh', textAlign: 'center'}}>...Loading...</h4>
 
   return (
     <div>
-        <AnimeDetail animeDetail={animeDetail} />
+        <AnimeDetail animeDetail={data!} />
     </div>
   )
 }

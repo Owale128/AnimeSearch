@@ -1,29 +1,16 @@
-import { useEffect, useState } from "react"
-import { IAnime } from "../model/IAnime"
 import ShowPopularAnime from "../components/ShowPopularAnime"
 import '../sass/popularAnime.scss'
 import { getPopularAnime } from "../services/animeService"
+import { useFetchAnime } from "../hooks/useFetchAnime"
 
 
 const PopularAnime = () => {
-    const [popularAnime, setPopularAnime] = useState<IAnime[]>([])
-
-    useEffect(() => {
-        const fetchPopularAnime = async () => {
-            try {
-                const data = await getPopularAnime()
-                setPopularAnime(data)
-                console.log(data, 'Popular Anime')
-            } catch (error) {
-                console.log('Could not fetch', error)
-            }
-        }
-        fetchPopularAnime()
-    }, [])
+  const {data} = useFetchAnime(getPopularAnime)
 
   return (
     <div className="popularAnimeContainer">
-      <ShowPopularAnime popularAnime={popularAnime} />
+            <h3>Popular Anime</h3>
+      <ShowPopularAnime popularAnime={data || []} />
     </div>
   )
 }

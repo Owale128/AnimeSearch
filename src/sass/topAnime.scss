@@ -1,24 +1,20 @@
 .topAnimeContainer {
     width: 15rem;
+    text-align: center;
     margin: 0rem 0 0 2rem;
     
-    h2 {
-        margin-left: 3rem;
-    }
+ 
     .topAnime {
         display: flex;
-        padding: 1rem;
+        padding: 0.5rem;
         align-items: center;
         margin-bottom: 1rem;
         background-color: white;
         border: 0.01rem solid black;
-
-        h3 {
-            margin-left: 1rem;
-        }
         
         img {
             width: 5rem;
+            margin-right: 1rem;
         }
     }
     

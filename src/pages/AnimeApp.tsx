@@ -1,41 +1,25 @@
-import { useContext, useEffect, useState } from "react"
+import { useContext} from "react"
 import Animes from "../components/Animes";
-import { IAnime } from "../model/IAnime";
 import TopAnime from "./TopAnime";
 import '../sass/animeApp.scss'
 import { AnimeContext } from "../context/AnimeContext";
+import { useFetchAnime } from "../hooks/useFetchAnime";
 import { searchForAnime } from "../services/animeService";
+import PopularAnime from "./PopularAnime";
 
 const AnimeApp = () => {
-    const [getAnime, setGetAnime] = useState<IAnime[]>([])
-    const [isLoading, setIsLoading] = useState(true)
     const {query} = useContext(AnimeContext)
+    const {data, isLoading} = useFetchAnime(() => searchForAnime(query))
 
-    useEffect(() => {
-      const fetchAnime = async () => {
-        try {
-          const data = await searchForAnime(query)
-          console.log(data)
-          setGetAnime(data)
-        } catch (error) {
-          console.error('Could not fetch:', error)
-        } finally{
-          setIsLoading(false)
-        }
-      }
-      fetchAnime()
-    }, [query])
-
-    if(isLoading) {
-      return <h4>...Loading...</h4>
-    }
-
+    if(isLoading) return <h4 style={{height: '100vh', textAlign: 'center'}}>...Loading...</h4>
+    
   return (
     <>
         <h1>Anime World</h1>
       <div className="container">
       <TopAnime />
-      <Animes getAnime={getAnime}/>
+      <Animes getAnime={data || []}/>
+      <PopularAnime />
       </div>
     </>
 
