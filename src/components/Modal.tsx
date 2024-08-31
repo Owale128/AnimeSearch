@@ -3,9 +3,9 @@ import '../sass/animeDetail.scss'
 
 const CloseButton = styled.button 
 `position: absolute;
-top: 11rem;
+top: 13rem;
 right: 30rem;
-background: black;
+background: green;
 color: white;
 border: none;
 border-radius: 1rem;

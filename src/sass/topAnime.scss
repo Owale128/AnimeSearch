@@ -2,15 +2,28 @@
     width: 15rem;
     text-align: center;
     margin: 0rem 0 0 2rem;
-    
  
     .topAnime {
         display: flex;
         padding: 0.5rem;
+        cursor: pointer;
         align-items: center;
         margin-bottom: 1rem;
-        background-color: white;
-        border: 0.01rem solid black;
+        border-radius: 0.5rem;
+        transition: 0.2s ease-in;
+        background-color: black;
+        border: 0.01rem solid white;
+
+        &:hover {
+           color: black;
+           background-color: white;
+        }
+
+
+        h3 {
+            font-size: 1rem;
+        }
+      
         
         img {
             width: 5rem;

@@ -1,16 +1,30 @@
     .popularAnimeContainer {
             width: 15rem;
-             margin: 0 2rem 0 0;
-             text-align: center;
-        
-        .popularAnime {
-            display: flex;
-            padding: 0.5rem;
-            align-items: center;
-            margin-bottom: 1rem;
-            background-color: white;
-            border: 0.01rem solid black;
-            
+            text-align: center;
+            margin: 5rem 2rem 0 0;
+            position: sticky;
+            top: 1.5rem;
+            align-self: start;
+             
+             .popularAnime {
+                 display: flex;
+                 padding: 0.5rem;
+                 cursor: pointer;
+                 align-items: center;
+                 margin-bottom: 1rem;
+                 border-radius: 0.5rem;
+                 background-color: black;
+                 border: 0.01rem solid white;
+                 transition: 0.2s ease-in;
+
+                 &:hover {
+                    color: black;
+                    background-color: white;
+                 }
+
+              h3 {
+            font-size: 1rem;
+        }
                 
                 img {
                     width: 5rem;

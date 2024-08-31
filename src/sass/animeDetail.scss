@@ -1,26 +1,28 @@
 .animeDetailContainer {
-    gap: 2rem; 
+    gap: 8rem; 
+    height: 60vh;
     display: flex; 
     padding: 2rem;
     margin-top: 4.5rem;
     align-items: center; 
-    border-radius: 0.5rem; 
-    background-color: #fff; 
-    height: 60vh;
+    background-color: black; 
 
     img {
         width: 16rem; 
         height: auto; 
+        cursor: pointer;
         border-radius: 0.5rem; 
-        border: 0.01rem solid black; 
+        transition: 0.3s ease;
+        border: 0.01rem solid white; 
+
+        &:hover {
+            box-shadow: 0 0 1rem 0.5rem rgba(105, 205, 255, 0.8); 
+        }
     }
 
     .animeTextContent {
-        display: flex;
         max-width: 50rem; 
-        text-align: center;
-        flex-direction: column; 
-        justify-content: flex-start; 
+        text-align: center;  
     }
 
     h2 {
@@ -28,17 +30,18 @@
     }
 
     p {
-        margin-bottom: 1.5rem; 
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 1.3rem;
     }
 
     .openModalBtn {
         border: none;
-        color: white;
+        color: black;
         cursor: pointer;
         font-size: 1.3rem;
         padding: 0.5rem 1rem; 
         border-radius: 0.3rem;
-        background-color: black ;
+        background-color: white ;
         transition: background-color 0.3s;
 
         &:hover {

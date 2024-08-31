@@ -5,7 +5,6 @@ import '../sass/animeApp.scss'
 import { AnimeContext } from "../context/AnimeContext";
 import { useFetchAnime } from "../hooks/useFetchAnime";
 import { searchForAnime } from "../services/animeService";
-import PopularAnime from "./PopularAnime";
 
 const AnimeApp = () => {
     const {query} = useContext(AnimeContext)
@@ -19,7 +18,6 @@ const AnimeApp = () => {
       <div className="container">
       <TopAnime />
       <Animes getAnime={data || []}/>
-      <PopularAnime />
       </div>
     </>
 
