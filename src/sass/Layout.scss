@@ -1,17 +1,18 @@
 header {
     display: flex;
     padding: 1rem;
-    background-color: rgb(39, 173, 217);
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: rgb(39, 173, 217);
 
-    p {
-        display: block;
-    }
 
     .backLink {
+        left: 0;
         color: white;
+        margin-left: 2rem;
         font-size: 1.5rem;
+        position: absolute;
+        font-weight: bold;
 
         &:hover {
             color: black;
@@ -19,17 +20,17 @@ header {
     }
     
     h4 {
-        font-size: 2rem;
         display: flex;
         color: white;
+        font-size: 2rem;
         justify-content: center;
     }
 }
 
 footer {
     
-    color: white;
     padding: 1rem;
+    color: white;
     margin-top: 5rem;
     background-color: rgb(39, 173, 217);
 }

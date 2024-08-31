@@ -6,7 +6,7 @@ import PopularAnime from "./PopularAnime"
 
 
 const TopAnime = () => {
-  const {data} = useFetchAnime(getTopAnime)
+  const {data} = useFetchAnime(getTopAnime, [])
 
   return (
     <div className="topAnimeContainer">

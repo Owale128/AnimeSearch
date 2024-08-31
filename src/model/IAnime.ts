@@ -14,12 +14,7 @@ export interface IAnime {
     synopsis: string
     type: string
 
-    genres: {
-        mal_id: number;
-        name: string;
-        type: string;
-        url: string;
-    }
+    duration: string;
 
     trailer: {
         embed_url: string;

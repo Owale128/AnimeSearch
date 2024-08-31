@@ -8,9 +8,9 @@ import { searchForAnime } from "../services/animeService";
 
 const AnimeApp = () => {
     const {query} = useContext(AnimeContext)
-    const {data, isLoading} = useFetchAnime(() => searchForAnime(query))
+    const {data, isLoading} = useFetchAnime(() => searchForAnime(query), [query])
 
-    if(isLoading) return <h4 style={{height: '100vh', textAlign: 'center'}}>...Loading...</h4>
+    if(isLoading) return <h4 style={{fontSize: '4rem', height: '100vh', textAlign: 'center', alignItems: 'center'}}>...Loading...</h4>
     
   return (
     <>

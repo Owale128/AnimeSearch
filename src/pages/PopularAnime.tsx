@@ -5,7 +5,7 @@ import { useFetchAnime } from "../hooks/useFetchAnime"
 
 
 const PopularAnime = () => {
-  const {data} = useFetchAnime(getPopularAnime)
+  const {data} = useFetchAnime(getPopularAnime, [])
 
   return (
     <div className="popularAnimeContainer">

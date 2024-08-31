@@ -21,10 +21,15 @@ const AnimeDetail = ({animeDetail}: IAnimeDetail) => {
 
   return (
     <div className="animeDetailContainer">
+      <div className="animeInfo">
       <img src={animeDetail.images.jpg.image_url} alt={animeDetail.title} />
+      <p className="animeType"><span>Type:</span> {animeDetail.type}</p>
+      <p className="animeEpisodes"> <span>Episodes:</span> {animeDetail.episodes}</p>
+      <p className="animeDuration"><span>Duration:</span> {animeDetail.duration}</p>
+      </div>
       <div className="animeTextContent">
       <h2>{animeDetail.title}</h2>
-      <p>{animeDetail.synopsis}</p>
+      <p className="animeSynopsis">{animeDetail.synopsis}</p>
 
       {animeDetail.trailer && animeDetail.trailer.embed_url && (
         <>
@@ -40,7 +45,6 @@ const AnimeDetail = ({animeDetail}: IAnimeDetail) => {
         </Modal>
         </>
       )}
-      
       </div>
     </div>
   )

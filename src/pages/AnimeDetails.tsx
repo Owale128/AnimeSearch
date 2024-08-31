@@ -6,9 +6,9 @@ import { useFetchAnime } from "../hooks/useFetchAnime"
 
 const AnimeDetails = () => {
   const { id } = useParams<{id: string}>()
-  const {data, isLoading} = useFetchAnime(() => getAnimeDetails(id!))
+  const {data, isLoading} = useFetchAnime(() => getAnimeDetails(id!), [id])
 
-  if(isLoading) return <h4 style={{height: '100vh', textAlign: 'center'}}>...Loading...</h4>
+  if(isLoading) return <h4 style={{fontSize: '4rem', height: '100vh', textAlign: 'center', alignItems: 'center'}}>...Loading...</h4>
 
   return (
     <div>
