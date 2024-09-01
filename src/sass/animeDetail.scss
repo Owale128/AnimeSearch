@@ -101,6 +101,10 @@
         .openModalBtn {
             font-size: 1.3rem;
         }
+
+        .animeTextContent {
+            max-width: 40rem;
+         }
     }
 
 }
@@ -116,6 +120,9 @@
                 box-shadow: 0 0 1rem 0.5rem rgba(105, 205, 255, 0.8); 
             }
         }
+    }
+    .animeTextContent { 
+        max-width: 50rem;
     }
 }
 
