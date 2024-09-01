@@ -3,8 +3,6 @@ import '../sass/animeDetail.scss'
 
 const CloseButton = styled.button 
 `position: absolute;
-top: 11rem;
-right: 28rem;
 background: green;
 color: white;
 border: none;
@@ -31,7 +29,7 @@ transition: background-color 0.3s ease;
   return (
     <div>
         <div className="overlay">
-        <CloseButton onClick={onClose}>
+        <CloseButton onClick={onClose} className="closeModalBtn">
             Close
         </CloseButton>
         {children}

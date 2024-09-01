@@ -41,6 +41,7 @@ const AnimeDetail = ({animeDetail}: IAnimeDetail) => {
               src={animeDetail.trailer.embed_url}
               title={animeDetail.title}
               allowFullScreen
+              className="modalVideo"
               ></iframe>
         </Modal>
         </>

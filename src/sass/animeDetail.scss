@@ -44,7 +44,6 @@
     .animeHeading {
         text-align: center;
         margin-bottom: 1.5rem; 
-        text-decoration: underline;
     }
 
     .animeSynopsis {
@@ -79,6 +78,15 @@
         align-items: center;
         justify-content: center;
         background-color: rgba(0, 0, 0, 0.5);
+
+        .closeModalBtn {
+            top: 14rem;
+                right: 2rem;
+        }
+    }
+
+    .modalVideo {
+        width: 85vw;
     }
 }
 
@@ -105,6 +113,17 @@
         .animeTextContent {
             max-width: 40rem;
          }
+
+         .modalVideo {
+            width: 70vw;
+         }
+
+         .overlay {
+            .closeModalBtn {
+                top: 19.5rem;
+                right: 7.5rem;
+            }
+         }
     }
 
 }
@@ -124,6 +143,17 @@
     .animeTextContent { 
         max-width: 50rem;
     }
-}
+
+    .modalVideo {
+        width: 40vw;
+     }
+     .overlay {
+        .closeModalBtn {
+            top: 15.5rem;
+            right: 27rem;
+        }
+     }
+
+    }
 
  }
