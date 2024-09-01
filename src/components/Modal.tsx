@@ -3,8 +3,8 @@ import '../sass/animeDetail.scss'
 
 const CloseButton = styled.button 
 `position: absolute;
-top: 13rem;
-right: 30rem;
+top: 11rem;
+right: 28rem;
 background: green;
 color: white;
 border: none;
