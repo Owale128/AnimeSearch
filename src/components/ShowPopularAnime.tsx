@@ -13,8 +13,8 @@ const ShowPopularAnime = ({popularAnime}: IShowPopularAnime) => {
       {popularAnime.slice(0, maxPopularAnime).map((pop) => (
          <NavLink to={`/animeDetails/${pop.mal_id}`} className='navLink'>
         <div key={pop.mal_id} className="popularAnime">
-            <img src={pop.images.jpg.image_url} alt={pop.title} />
-            <h3>{pop.title}</h3>
+            <img src={pop.images.jpg.image_url} alt={pop.title} className="popularAnimeImg" />
+            <h3 className="popularAnimeHeading">{pop.title}</h3>
         </div>
          </NavLink>
       ))}

@@ -10,11 +10,11 @@ const AnimeApp = () => {
     const {query} = useContext(AnimeContext)
     const {data, isLoading} = useFetchAnime(() => searchForAnime(query), [query])
 
-    if(isLoading) return <h4 style={{fontSize: '4rem', height: '100vh', textAlign: 'center', alignItems: 'center'}}>...Loading...</h4>
+    if(isLoading) return <h4 className="isLoading">...Loading...</h4>
     
   return (
     <>
-        <h1>Anime World</h1>
+        <h1 className="animeAppHeading">Anime World</h1>
       <div className="container">
       <TopAnime />
       <Animes getAnime={data || []}/>

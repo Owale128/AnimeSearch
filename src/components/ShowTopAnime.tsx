@@ -13,8 +13,8 @@ const ShowTopAnime = ({topAnime}: IShowTopAnime) => {
       {topAnime.slice(0, maxAnimeToShow).map((top) => (
            <NavLink to={`/animeDetails/${top.mal_id}`} className='navLink'>
         <div key={top.mal_id} className="topAnime">
-            <img src={top.images.jpg.image_url} alt={top.title} />
-            <h3>{top.title}</h3>
+            <img src={top.images.jpg.image_url} alt={top.title} className="topAnimeImg" />
+            <h3 className="topAnimeHeading">{top.title}</h3>
         </div>
            </NavLink>
       ))}

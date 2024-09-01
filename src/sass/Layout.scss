@@ -1,36 +1,56 @@
 header {
     display: flex;
     padding: 1rem;
-    align-items: center;
     justify-content: center;
     background-color: rgb(39, 173, 217);
 
-
     .backLink {
         left: 0;
+        top: 6.5rem;
         color: white;
         margin-left: 2rem;
         font-size: 1.5rem;
         position: absolute;
-        font-weight: bold;
 
-        &:hover {
-            color: black;
+        &:active {
+            color: red;
         }
-    }
-    
-    h4 {
-        display: flex;
-        color: white;
-        font-size: 2rem;
-        justify-content: center;
     }
 }
 
 footer {
-    
     padding: 1rem;
     color: white;
     margin-top: 5rem;
     background-color: rgb(39, 173, 217);
+}
+
+@media (min-width: 48rem) { 
+
+    header {
+        .backLink {
+            top: 2rem;
+            left: 7.8rem;
+           font-weight: bold;
+
+           &:active {
+            color: black;
+        }
+        }
+    }
+
+}
+
+@media (min-width: 64rem) { 
+
+    header {
+        .backLink {
+            top: 2rem;
+            left: 28.5rem;
+           
+           &:hover {
+            color: black;
+        }
+        }
+    }
 }

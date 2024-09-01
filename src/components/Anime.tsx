@@ -11,9 +11,9 @@ const Anime = ({anime}: IAnimeProps) => {
   return (
     <div className="animeContainer">
       <NavLink to={`/animeDetails/${anime.mal_id}`} className='navLink'>
-      <img src={anime.images.jpg.image_url} alt={anime.title} />
+      <img src={anime.images.jpg.image_url} alt={anime.title} className="animeImg"/>
         Click for more details
-      <h3>{anime.title}</h3>
+      <h3 className="animeTitleHeading">{anime.title}</h3>
         </NavLink> 
     </div>
   )

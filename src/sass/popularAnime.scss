@@ -1,11 +1,11 @@
     .popularAnimeContainer {
-            width: 15rem;
-            text-align: center;
-            margin: 5rem 2rem 0 0;
-            position: sticky;
-            top: 1.5rem;
-            align-self: start;
-             
+        top: 3.5rem;
+        width: 9rem;
+        position: sticky;
+        text-align: center;
+        align-self: start;
+        margin: 3rem 0 0 0;
+        
              .popularAnime {
                  display: flex;
                  color: white;
@@ -18,19 +18,51 @@
                  border: 0.01rem solid white;
                  transition: 0.2s ease-in;
 
-                 &:hover {
+                 &:active {
                     color: black;
                     background-color: white;
                  }
 
-              h3 {
-            font-size: 1rem;
-        }
-                
-                img {
-                    width: 5rem;
+              .popularAnimeHeading {
+            font-size: 0.6rem;
+        }   
+                .popularAnimeImg {
+                    width: 3rem;
                     margin-right: 1rem;
                 }
             }
             
         }
+
+        @media (min-width: 48rem) { 
+
+            .popularAnimeContainer {
+                width: 13rem;
+                top: 0.01rem;
+         
+                .popularAnime {
+                    padding: 0.5rem;
+
+                    &:hover {
+                        color: black;
+                        background-color: white;
+                    }
+                    
+                    .popularAnimeHeading {
+                        font-size: 1rem;
+                    }
+                      
+                    .popularAnimeImg {
+                        width: 5rem;
+                        margin-right: 1rem;
+                    }
+                }
+            }
+
+         }
+
+        @media (min-width: 64rem) { 
+            .popularAnimeContainer {
+                width: 15rem;
+            }
+         }

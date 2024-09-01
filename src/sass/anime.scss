@@ -1,37 +1,37 @@
 .animesContainer {
     gap: 2rem;
-    width: 60%;
+    width: 45%;
     display: grid;
     padding: 0.5rem;
-    margin: 8rem 0rem 0 10rem ;
-    grid-template-columns: repeat(3, 1fr);
+    margin: 3.5em 0rem 2rem 1.5rem ;
+    grid-template-columns: repeat(1, 1fr);
     
     .animeContainer {
+        height: 18rem;
         overflow: hidden;
         padding: 0.1rem;
-        height: 25rem;
         cursor: pointer;
         text-align: center;
         border-radius: 1rem;
         transition: 0.3s ease;
         background-color: white;
 
-        &:hover {
-            box-shadow: 0 0 2rem 1rem rgba(105, 205, 255, 0.8); 
+        &:active {
+            box-shadow: 0 0 1rem 0.5rem rgba(105, 205, 255, 0.8); 
         }
 
         .navLink {
             color: black;
         }
         
-        h3 {
-            font-size: 1.15rem;
+        .animeTitleHeading {
             color: black;
+            font-size: 1rem;
         }
         
-        img {
+        .animeImg {
             width: 100%;
-            height: 80%; 
+            height: 75%; 
             border-radius: 1rem; 
         }
         
@@ -42,4 +42,38 @@
         }
     }
     
+}
+
+@media (min-width: 48rem) { 
+
+    .animesContainer{
+        width: 60%;
+        gap: 1.5rem;
+        margin: 8rem 0rem 2rem 2rem ;
+        grid-template-columns: repeat(2, 1fr);
+        
+        .animeContainer {
+            height: 24rem;
+
+            &:hover {
+                box-shadow: 0 0 1rem 0.5rem rgba(105, 205, 255, 0.8); 
+
+            }
+        }
+    }
+}
+
+@media (min-width: 64rem) { 
+
+    .animesContainer {
+        gap: 1.8rem;
+        width: 55%;
+        margin: 8rem 0rem 0 10rem ;
+        grid-template-columns: repeat(3, 1fr);
+
+        .animeContainer {
+            height: 25rem;
+        }
+    }
+
 }
