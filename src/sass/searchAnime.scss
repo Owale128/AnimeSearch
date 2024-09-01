@@ -1,22 +1,22 @@
 form {
-    display: inline;
     padding: 1rem;
-
+    
     input {
+        padding: 0.3rem;
+        font-size: 1.1rem;
         text-align: center;
-        font-size: 1.3rem;
         margin-right: 1rem;
         border-radius: 0.5rem; 
-        padding: 0.3rem;
     }
-
-    button {
+    
+    .formBtn{
         cursor: pointer;
         padding: 0.5rem;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        color: black;
         border-radius: 0.6rem;
-        border: 0.1rem solid black;
         transition:  0.2s ease-in;
+        border: 0.1rem solid black;
 
         &:hover {
             color: white;
@@ -24,3 +24,19 @@ form {
         }
     }
 }
+
+@media (min-width: 48rem) { 
+
+    form {
+
+        input {
+            font-size: 1.3rem;
+        }
+
+        .formBtn {
+            font-size: 1rem;
+        }
+
+    }
+
+ }

@@ -21,7 +21,7 @@ const SearchAnime = () => {
     onChange={(e) => setInputValue(e.target.value)}
     placeholder="Search for anime"
     />
-    <button>Search</button>
+    <button className="formBtn">Search</button>
    </form>
   )
 }
