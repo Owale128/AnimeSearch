@@ -5,7 +5,7 @@ import { useState } from "react";
 import { AnimeContext } from "../context/AnimeContext";
 
 const Layout = () => {
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('Naruto')
   const location = useLocation();
   const detailPage = location.pathname.startsWith('/animeDetails');
 
