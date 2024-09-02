@@ -1,9 +1,24 @@
 @import './keyframes.scss';
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 
 .animeAppHeading {
   margin: 4rem 0;
   font-size: 2.5rem;
   text-align: center;
+  font-family: 'silkscreen';
+
+  .anime, .world {
+    display: inline-block;
+  }
+  
+  .anime {
+    margin-right: 1rem;
+    animation: slideInLeft 0.7s ease-in;
+  }
+  
+  .world {
+    animation: slideInRight 0.7s ease-in;
+  }
 }
 .container{
   display: flex;
@@ -16,3 +31,18 @@
   align-items: center;
   height: 100vh;
 }
+
+@media (min-width: 48rem) {
+
+  .animeAppHeading {
+    font-size: 2.8rem;
+  }
+
+ }
+
+ @media (min-width: 64rem) {
+  .animeAppHeading {
+    font-size: 3rem;
+  }
+
+  }

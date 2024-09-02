@@ -14,7 +14,10 @@ const AnimeApp = () => {
     
   return (
     <>
-        <h1 className="animeAppHeading">Anime World</h1>
+        <h1 className="animeAppHeading">
+          <span className="anime">Anime</span>
+          <span className="world"> World</span> 
+          </h1>
       <div className="container">
       <TopAnime />
       <Animes getAnime={data || []}/>
