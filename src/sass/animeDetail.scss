@@ -7,6 +7,7 @@
     align-items: center; 
     flex-direction: column;
     background-color: black; 
+    animation: fadeIn 0.6s ease-in;
 
     .animeInfo {
         display: flex;
@@ -18,6 +19,7 @@
             width: 12rem; 
             height: auto; 
             cursor: pointer;
+            margin-bottom: 0.5rem;
             border-radius: 0.5rem; 
             transition: 0.3s ease;
             border: 0.01rem solid white; 
@@ -30,6 +32,7 @@
         .animeType, .animeEpisodes, .animeDuration {
             margin: 0.4rem;
             text-align: center;
+            
             span {
                 color: rgb(8, 202, 8);
             }
@@ -147,13 +150,20 @@
     .modalVideo {
         width: 40vw;
      }
-     .overlay {
-        .closeModalBtn {
-            top: 15.5rem;
-            right: 27rem;
-        }
-     }
 
     }
 
  }
+
+ @media (min-width: 90rem) {
+
+     .animeDetailContainer { 
+
+        .overlay {
+        .closeModalBtn {
+            top: 11rem;
+            right: 28rem;
+        }
+     }
+     }
+    } 

@@ -15,7 +15,7 @@ const Layout = () => {
         {detailPage && (
           <NavLink to={'/'} className='backLink'>Back</NavLink>
         )}
-        <SearchAnime  />
+      {!detailPage &&  <SearchAnime  />}
       </header>
       <main>
         <Outlet />

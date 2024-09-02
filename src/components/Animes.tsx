@@ -13,8 +13,7 @@ const Animes = ({getAnime}: IAnimes) => {
     <div className="animesContainer">
        {getAnime.map((a) => (
         <Anime key={a.mal_id} anime={a}/>
-       ))}
-      
+       ))} 
     </div>
   )
 }
