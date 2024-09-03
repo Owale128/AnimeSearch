@@ -1,8 +1,8 @@
-import ShowTopAnime from "../components/ShowTopAnime"
 import '../sass/topAnime.scss'
+import PopularAnime from "./PopularAnime"
+import ShowTopAnime from "../components/ShowTopAnime"
 import { getTopAnime } from "../services/animeService"
 import { useFetchAnime } from "../hooks/useFetchAnime"
-import PopularAnime from "./PopularAnime"
 
 
 const TopAnime = () => {

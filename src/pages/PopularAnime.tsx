@@ -1,7 +1,7 @@
-import ShowPopularAnime from "../components/ShowPopularAnime"
 import '../sass/popularAnime.scss'
-import { getPopularAnime } from "../services/animeService"
 import { useFetchAnime } from "../hooks/useFetchAnime"
+import { getPopularAnime } from "../services/animeService"
+import ShowPopularAnime from "../components/ShowPopularAnime"
 
 
 const PopularAnime = () => {

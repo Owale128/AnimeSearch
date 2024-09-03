@@ -1,6 +1,6 @@
-import { FormEvent, useContext, useState } from "react";
-import { AnimeContext } from "../context/AnimeContext";
 import '../sass/searchAnime.scss'
+import { AnimeContext } from "../context/AnimeContext";
+import { FormEvent, useContext, useState } from "react";
 
 const SearchAnime = () => {
     const {setQuery} = useContext(AnimeContext)

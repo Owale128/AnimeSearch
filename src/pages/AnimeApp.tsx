@@ -1,7 +1,8 @@
-import { useContext} from "react"
-import Animes from "../components/Animes";
-import TopAnime from "./TopAnime";
 import '../sass/animeApp.scss'
+import { useContext} from "react"
+import TopAnime from "./TopAnime";
+import Animes from "../components/Animes";
+import Loading from "../components/Loading";
 import { AnimeContext } from "../context/AnimeContext";
 import { useFetchAnime } from "../hooks/useFetchAnime";
 import { searchForAnime } from "../services/animeService";
@@ -10,14 +11,10 @@ const AnimeApp = () => {
     const {query} = useContext(AnimeContext)
     const {data, isLoading} = useFetchAnime(() => searchForAnime(query), [query])
 
-    if(isLoading) return <h4 className="isLoading">...Loading...</h4>
+    if(isLoading) return <Loading />
     
   return (
     <>
-        <h1 className="animeAppHeading">
-          <span className="anime">Anime</span>
-          <span className="world"> World</span> 
-          </h1>
       <div className="container">
       <TopAnime />
       <Animes getAnime={data || []}/>

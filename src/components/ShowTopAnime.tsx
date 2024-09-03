@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { IAnime } from "../model/IAnime"
 import '../sass/topAnime.scss'
+import { IAnime } from "../model/IAnime"
+import { NavLink } from "react-router-dom";
 
 interface IShowTopAnime {
     topAnime: IAnime[]

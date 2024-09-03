@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { IAnime } from "../model/IAnime"
 import Modal from "./Modal";
+import { useState } from "react";
 import '../sass/animeDetail.scss'
+import { IAnime } from "../model/IAnime"
 
 interface IAnimeDetail {
   animeDetail: IAnime;

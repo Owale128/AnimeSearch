@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import '../sass/animeDetail.scss'
+import styled from "styled-components";
 
 const CloseButton = styled.button 
 `position: absolute;
