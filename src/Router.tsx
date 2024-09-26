@@ -3,6 +3,7 @@ import Layout from "./pages/Layout";
 import AnimeApp from "./pages/AnimeApp";
 import AnimeDetails from "./pages/AnimeDetails";
 import NotFound from "./pages/NotFound";
+import SavedAnimes from "./pages/SavedAnimes";
 
 
 export const router = createBrowserRouter([
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
             path: '/animeDetails/:id',
             element: <AnimeDetails />
         },
+        {
+            path: '/savedAnimes',
+            element: <SavedAnimes />
+        }
     ],
     errorElement: <NotFound />
 }

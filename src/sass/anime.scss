@@ -16,6 +16,11 @@
         transition: 0.3s ease;
         background-color: white;
 
+        .saveBtn {
+            cursor: pointer;
+            padding: 0.3rem;
+        }
+
         &:active {
             box-shadow: 0 0 1rem 0.5rem rgba(105, 205, 255, 0.8); 
         }

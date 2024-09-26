@@ -1,23 +1,31 @@
 import '../sass/Layout.scss'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Heading from "../components/Heading";
 import SearchAnime from "../components/SearchAnime";
 import { AnimeContext } from "../context/AnimeContext";
 import { NavLink, Outlet, useLocation } from "react-router-dom"
 
 const Layout = () => {
+  const yourSavedAnime = JSON.parse(localStorage.getItem('savedAnime') || '[]')
+  const [savedAnime, setSavedAnime] = useState(yourSavedAnime)
   const [query, setQuery] = useState('Naruto')
   const location = useLocation();
   const detailPage = location.pathname.startsWith('/animeDetails');
+  const savedPage = location.pathname.startsWith('/savedAnimes')
+
+  useEffect(() => {
+    localStorage.setItem('savedAnime', JSON.stringify(savedAnime))
+  }, [savedAnime])
+
   return (
-    <AnimeContext.Provider value={{query, setQuery}}>
+    <AnimeContext.Provider value={{query, setQuery, savedAnime, setSavedAnime }}>
       <header>
-        {detailPage && (
+        {detailPage || savedPage && (
           <NavLink to={'/'} className='backLink'>Back</NavLink>
         )}
-      {!detailPage &&  <SearchAnime  />}
+      {!detailPage && !savedPage && <SearchAnime  />}
       </header>
-         {!detailPage &&  <Heading />}
+         {!detailPage && !savedPage && <Heading />}
       <main>
         <Outlet />
       </main>
