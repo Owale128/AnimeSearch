@@ -25,9 +25,12 @@ a:hover {
 body {
   margin: 0;
   padding: 0;
+  color: white;
+  min-height: 100vh;
   box-sizing: border-box;
   background-color: black;
-  color: white;
+  position: relative;
+  padding-bottom: 8rem;
 }
 
 h1 {

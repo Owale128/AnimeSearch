@@ -1,11 +1,17 @@
 import { useContext } from "react"
 import { AnimeContext } from "../context/AnimeContext"
+import '../sass/savedAnime.scss';
 
 const SavedAnimes = () => {
-  const {savedAnime} = useContext(AnimeContext)
+  const {savedAnime, setSavedAnime} = useContext(AnimeContext)
+
+  const removeAnime = (id: number) => {
+   const updatedSavedAnime = savedAnime.filter((anime) => anime.mal_id !== id)
+    setSavedAnime(updatedSavedAnime)
+  }
     
   return (
-    <div>
+    <div className="savedAnimeContainer">
       <h1>Saved Anime</h1>
       {savedAnime.length === 0 ? (
         <p>No Anime Saved!</p>
@@ -13,8 +19,10 @@ const SavedAnimes = () => {
         <ul style={{listStyle: 'none'}}>
           {savedAnime.map((anime) => (
             <li key={anime.mal_id}>
-              <img src={anime.images.jpg.image_url} alt={anime.title} />
-              <h3>{anime.title}</h3>
+              <h3 className="animeTitle">{anime.title}</h3>
+              <img src={anime.images.jpg.image_url} alt={anime.title} className="animeImg" />
+              <button onClick={() => removeAnime(anime.mal_id)} className="removeBtn">Remove</button>
+              <hr />
             </li>
           ))}
         </ul>

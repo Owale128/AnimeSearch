@@ -1,0 +1,85 @@
+
+.savedAnimeContainer {
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    h1, p {
+        margin-top: 3rem;
+        text-align: center;
+    }
+    
+    ul {
+        li {  
+            text-align: center;
+            
+            .animeImg {
+                width: 12rem;
+                border-radius: 0.5rem; 
+                box-shadow: 0 0 1rem 0.2rem rgba(105, 205, 255, 0.8); 
+            }
+
+            .removeBtn {
+                width: 5rem;
+                color: white;
+                display: block;
+                cursor: pointer;
+                padding: 0.3rem;
+                font-size: 1rem;
+                margin: 2rem auto;
+                transition: 0.15s ease-in;
+                border-radius: 0.5rem;
+                border: 0.01rem solid white;
+                background-color: rgb(0, 0, 0);
+
+                &:active {
+                    background-color: red;
+                }
+            }
+            
+            hr {
+                width: 90%;
+            }
+        }
+    }
+}
+
+@media (min-width: 48rem) { 
+
+    .savedAnimeContainer {
+
+        ul {
+            li {
+                hr {
+                    width: 60%;
+                }
+            }
+        }
+    }
+ }
+@media (min-width: 64rem) { 
+
+    .savedAnimeContainer {
+
+        ul {
+            margin-top: 5rem;
+            li {
+
+                .animeImg {
+                    width: 15rem;
+                }
+
+                .removeBtn {
+                    &:hover {
+                        background-color: red;
+                    }
+                }
+
+                hr {
+                    width: 60%;
+                }
+            }
+        }
+    }
+ }
