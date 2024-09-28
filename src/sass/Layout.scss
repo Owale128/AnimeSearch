@@ -9,7 +9,7 @@ header {
    
     .bookmark {
         top: 1.6rem;
-        right: 0.5rem;
+        right: 1rem;
         width: 1.4rem;
         cursor: pointer;
         position: absolute;
@@ -28,7 +28,7 @@ header {
 
 footer {
     bottom: 0;
-    width: 98.3%;
+    width: 91.8%;
     padding: 1rem;
     color: white;
     font-weight: bold;
@@ -49,6 +49,9 @@ footer {
         }
         }
     }
+    footer {
+        width: 95.5%;
+    }
 
 }
 
@@ -66,5 +69,8 @@ footer {
             right: 3rem;
             width: 1.6rem;
         }
+    }
+    footer {
+        width: 97.7%;
     }
 }

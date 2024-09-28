@@ -14,7 +14,11 @@ const SavedAnimes = () => {
     <div className="savedAnimeContainer">
       <h1>Saved Anime</h1>
       {savedAnime.length === 0 ? (
-        <p>No Anime Saved!</p>
+        <p>
+          No Anime Saved!
+          <br />
+          <span>🫠</span>
+        </p>
       ) : (
         <ul style={{listStyle: 'none'}}>
           {savedAnime.map((anime) => (
