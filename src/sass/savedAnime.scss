@@ -1,9 +1,11 @@
 
 .savedAnimeContainer {
+    text-align: center;
+    margin-right: 2rem;
 
     h1 {
         font-size: 2rem;
-        margin: 4rem 0;
+        margin: 4rem 0 4rem 2rem;
     }
 
     h1, p {
@@ -18,7 +20,10 @@
     
     ul {
         li {  
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             
             .animeImg {
                 width: 12rem;
@@ -33,7 +38,7 @@
                 cursor: pointer;
                 padding: 0.3rem;
                 font-size: 1rem;
-                margin: 2rem auto;
+                margin: 2rem 0;
                 transition: 0.15s ease-in;
                 border-radius: 0.5rem;
                 border: 0.01rem solid white;
