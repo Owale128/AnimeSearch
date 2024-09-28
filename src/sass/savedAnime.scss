@@ -36,16 +36,16 @@
                 color: white;
                 display: block;
                 cursor: pointer;
-                padding: 0.3rem;
+                padding: 0.5rem;
                 font-size: 1rem;
                 margin: 2rem 0;
                 transition: 0.15s ease-in;
                 border-radius: 0.5rem;
                 border: 0.01rem solid white;
-                background-color: rgb(0, 0, 0);
+                background-color: #e74c3c;
 
                 &:active {
-                    background-color: red;
+                    background-color: #d35400; 
                 }
             }
             
@@ -54,6 +54,26 @@
             }
         }
     }
+}
+
+.starRating {
+    margin: 1rem 0;
+
+    span {
+        cursor: pointer;
+        font-size: 2rem;
+        margin-right: 0.3rem;
+        &.filled {
+            color: gold;
+        }
+
+        &:active{
+            color: white;
+            transform: scale(1.2); 
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+
 }
 
 @media (min-width: 48rem) { 
@@ -87,7 +107,7 @@
 
                 .removeBtn {
                     &:hover {
-                        background-color: red;
+                        background-color: #d35400; 
                     }
                 }
 

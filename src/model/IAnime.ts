@@ -11,8 +11,9 @@ export interface IAnime {
     url: string;
     background: string;
     episodes: number;
-    synopsis: string
-    type: string
+    synopsis: string;
+    type: string;
+    score: number;
 
     duration: string;
 
